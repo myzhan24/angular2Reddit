@@ -19,4 +19,12 @@ export class Article {
   public voteDown(): void {
     this.votes--;
   }
+
+  public domain(): string {
+    try {
+      return this.link.split('//')[1].split('/')[0];
+    } catch (err) {
+      return null;
+    }
+  }
 }
